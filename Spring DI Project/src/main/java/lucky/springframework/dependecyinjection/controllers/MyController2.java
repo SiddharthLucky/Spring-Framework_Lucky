@@ -3,10 +3,10 @@ package lucky.springframework.dependecyinjection.controllers;
 import org.springframework.stereotype.Controller;
 
 @Controller
-public class MyController
+public class MyController2
 {
-    public void func()
+    public void func2()
     {
-        System.out.println("Hello World");
+        System.out.println("Whats up");
     }
 }

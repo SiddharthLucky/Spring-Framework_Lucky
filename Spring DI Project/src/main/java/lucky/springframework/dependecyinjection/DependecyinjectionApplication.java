@@ -13,6 +13,7 @@ public class DependecyinjectionApplication {
         ConfigurableApplicationContext ctx = SpringApplication.run(DependecyinjectionApplication.class, args);
 
         MyController controller = (MyController) ctx.getBean("myController");
+
         controller.func();
     }
 }
