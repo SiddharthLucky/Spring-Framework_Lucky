@@ -1,0 +1,24 @@
+- Spring Framework is the first major release since 4.
+
+-------------Whats new is 5-----------------.
+- Core framework revision
+- Core container updates
+- Functional programming with Kotlin
+- Testing Improvements.
+
+-----------Spring 5 features based on java 8------------
+- Efficiency increase using reflections, java 8.
+- Selective declerations built on java8 default methods.
+- @nullable and @Notnull to explicitly mark null variables.
+
+JPA - Java persistence API, used for working with relational sets.
+it can be used as an ORM - Object relational mapping similar to LINQ.
+
+To convert the POJO classes into JPA entities you can use @Entity tag (javax.persistence)
+The H2 (DB written in JAVA) the console is set to false by default, go in and enable it.
+
+- If there is a mapping with a table that has to refer 2 colums from 2 tables,
+
+You can use:
+JoinTable(name = tableName, joinColums = @joinColum(name = "Col1 Name"), 
+InverseJoinColumns = @joinColum(name = "Col2");
