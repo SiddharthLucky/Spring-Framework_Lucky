@@ -22,3 +22,37 @@ The H2 (DB written in JAVA) the console is set to false by default, go in and en
 You can use:
 JoinTable(name = tableName, joinColums = @joinColum(name = "Col1 Name"), 
 InverseJoinColumns = @joinColum(name = "Col2");
+
+-------- Spring Data JPA-----------
+
+- Simply put - JPA is an interface and Hibernate is the implementation.
+
+The persistance API makes it relatively easy to switch one implementations with the other.
+
+Spring Data repos provide an implementation of the Repo Pattern(DAO pattern)
+
+- it is important because it allows you to substitute the persistance layer.
+ie, going from SQL to NoSQL.
+
+Bootstrap class can be used ro intialize the values in the DB.
+
+- If auto wiring fails, make sure that you have added the @Repository tag to the classes or interfaces.
+
+- Bean are objects that form a backbone of the application. It is an object that is
+instantiated, assembled, managed by spring IoC Container.
+
+----------- Spring MVC--------------
+
+- Very common design pattern.
+
+- Configure controller we use @Controller, - sets it up  to manage the class as a bean.
+
+- When @Contorller is used, the class is detected as a spring bean and the same is added to the spring context.
+
+- Auto wiring simply means getting an instance. done by passing that instance via the constructor.
+
+- The data brought from the source can be displayed in a template engine (Dynamic web content), same like JSP'same
+- Thyme life is a natural template engine. Better than JSP.
+
+- When using JSP, for updating, you have to put the files into tomcat and restart for the template to take effect.
+but in a natural template engine, you can directly do it, no need to redeploy.
