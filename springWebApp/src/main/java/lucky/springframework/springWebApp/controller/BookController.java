@@ -20,6 +20,6 @@ public class BookController
     public String getBooks(Model model)
     {
         model.addAttribute("books", bookRepository.findAll()); //Name is same as the one of the HTML file.
-        return "books";
+        return "books"; //The folder name and template name should match.
     }
 }
