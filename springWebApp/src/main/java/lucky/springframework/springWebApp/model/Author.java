@@ -2,22 +2,34 @@ package lucky.springframework.springWebApp.model;
 
 import javax.persistence.*;
 import java.util.HashSet;
-import java.util.Objects;
 import java.util.Set;
 
 @Entity
-public class Author
-{
+public class Author {
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private String FirstName;
-    private String LastName;
+    private String firstName;
+    private String lastName;
 
     @ManyToMany(mappedBy = "authors")
-    Set<Book> books = new HashSet<>();
+    private Set<Book> books  = new HashSet<>();
 
-    // - Getters and Setters.
+    public Author() {
+    }
+
+    public Author(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    public Author(String firstName, String lastName, Set<Book> books) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.books = books;
+    }
+
     public Long getId() {
         return id;
     }
@@ -27,19 +39,19 @@ public class Author
     }
 
     public String getFirstName() {
-        return FirstName;
+        return firstName;
     }
 
     public void setFirstName(String firstName) {
-        FirstName = firstName;
+        this.firstName = firstName;
     }
 
     public String getLastName() {
-        return LastName;
+        return lastName;
     }
 
     public void setLastName(String lastName) {
-        LastName = lastName;
+        this.lastName = lastName;
     }
 
     public Set<Book> getBooks() {
@@ -50,37 +62,28 @@ public class Author
         this.books = books;
     }
 
-    //- Author Constructor
-    public Author()
-    {
-
-    }
-
-    public Author(String firstName, String lastName) {
-        setFirstName(firstName);
-        setLastName(lastName);
-    }
-
-    public Author(String firstName, String lastName, Set<Book> books) {
-        setFirstName(firstName);
-        setLastName(lastName);
-        setBooks(books);
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
+
         Author author = (Author) o;
-        return Objects.equals(id, author.id) &&
-                Objects.equals(FirstName, author.FirstName) &&
-                Objects.equals(LastName, author.LastName) &&
-                Objects.equals(books, author.books);
+
+        return id != null ? id.equals(author.id) : author.id == null;
     }
 
     @Override
     public int hashCode() {
+        return id != null ? id.hashCode() : 0;
+    }
 
-        return Objects.hash(id, FirstName, LastName, books);
+    @Override
+    public String toString() {
+        return "Author{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", books=" + books +
+                '}';
     }
 }
