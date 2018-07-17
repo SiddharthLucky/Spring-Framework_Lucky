@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: lucky.springframework.dependecyinjection.DependecyinjectionApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.759 s - in lucky.springframework.dependecyinjection.DependecyinjectionApplicationTests
