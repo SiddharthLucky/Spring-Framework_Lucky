@@ -1,15 +1,16 @@
 package lucky.springframework.jokesapplication.service;
 
 import guru.springframework.norris.chuck.ChuckNorrisQuotes;
+import lucky.springframework.jokesapplication.config.ChuckNorrisConfig;
 import org.springframework.stereotype.Service;
 
 @Service
 public class JokeService
 {
-    public static ChuckNorrisQuotes cJokes;
+    public final ChuckNorrisQuotes cJokes;
 
-    public JokeService() {
-        this.cJokes = new ChuckNorrisQuotes();
+    public JokeService(ChuckNorrisQuotes cJokes) {
+        this.cJokes = cJokes;
     }
 
     public String getJoke()
