@@ -9,8 +9,8 @@ public class JokeService
 {
     public final ChuckNorrisQuotes cJokes;
 
-    public JokeService(ChuckNorrisQuotes cJokes) {
-        this.cJokes = cJokes;
+    public JokeService(ChuckNorrisQuotes chuckNorrisQuotes) {
+        this.cJokes = chuckNorrisQuotes;
     }
 
     public String getJoke()
