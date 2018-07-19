@@ -8,8 +8,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 @SpringBootApplication
 public class DependecyinjectionApplication {
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         ConfigurableApplicationContext ctx = SpringApplication.run(DependecyinjectionApplication.class, args);
 
         MyController controller = (MyController) ctx.getBean("myController");
