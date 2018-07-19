@@ -5,10 +5,13 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
+import org.springframework.context.annotation.PropertySources;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 
 @Configuration
 @PropertySource("classpath:dbLogin.Properties")
+//@PropertySources({@PropertySource("classpath:dbLogin.Properties"),
+        //@PropertySource("classpath:dbLogin.Properties")})
 public class PropertiesRead {
 
     @Value("${sid.username}")
