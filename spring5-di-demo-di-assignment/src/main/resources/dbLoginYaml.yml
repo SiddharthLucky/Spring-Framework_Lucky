@@ -1,0 +1,6 @@
+# Picks up the properties similar to the dbLogin.properties format.
+sid:
+  testDB:
+    username: Siddharth
+    password: siddharth
+    url: siddharthLucky.com
